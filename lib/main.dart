@@ -10,13 +10,17 @@ void main() {
 }
 
 Widget build(BuildContext context) {
+  Future<void> futureFunction() async {
+  }
   return MultiProvider(
-      providers: [...ApplicationProvider.instance.dependItems],
-      child: FutureBuilder(
-        builder: (context, snapshot) {
-          return MyApp();
-        },
-      ));
+    providers: [...ApplicationProvider.instance.dependItems],
+    child: FutureBuilder(
+      future: futureFunction(),
+      builder: (context, snapshot) {
+        return MyApp();
+      },
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -31,7 +35,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: bgColor,
         primaryColor: greenColor,
         dialogBackgroundColor: secondaryColor,
-        buttonColor: greenColor,
+        // buttonColor: greenColor,
         textTheme: GoogleFonts.openSansTextTheme(Theme.of(context).textTheme)
             .apply(bodyColor: Colors.white),
         canvasColor: secondaryColor,

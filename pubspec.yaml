@@ -31,7 +31,7 @@ dependencies:
 
   provider: ^5.0.0
   fl_chart: ^0.36.1
-  google_fonts: ^2.1.0
+  google_fonts: ^2.1.1
   flutter_icons:
     git:
       url: https://github.com/adarsh-technocrat/flutter-icons.git
@@ -64,7 +64,7 @@ flutter:
     - assets/icons/
     - assets/slides/
     - assets/logo/
-    - assets/jsons/
+    
   # assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
